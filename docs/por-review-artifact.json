@@ -95,6 +95,51 @@
       "next_action": "Verify each asset through the final Vercel alias."
     },
     {
+      "screen_or_control": "Production campaign media and controls",
+      "viewport_or_device": "Vercel production alias",
+      "state_exercised": "Default campaign render and campaign 01 to 02 transition",
+      "result": "pass",
+      "evidence": "The live alias rendered the first public stock image and the next control rendered the second image with the 02 / 02 state.",
+      "severity": "none",
+      "next_action": "Verify product media and responsive production rendering."
+    },
+    {
+      "screen_or_control": "Production product media",
+      "viewport_or_device": "Vercel production alias",
+      "state_exercised": "Product-gallery render",
+      "result": "pass",
+      "evidence": "Both product cards visibly rendered their replacement public stock images on the live alias.",
+      "severity": "none",
+      "next_action": "No additional media-delivery action required."
+    },
+    {
+      "screen_or_control": "Production newsletter form",
+      "viewport_or_device": "Vercel production alias",
+      "state_exercised": "Attempted valid email submission",
+      "result": "not_verified",
+      "evidence": "The browser automation attempt did not expose the inline confirmation state that was observed locally; no subscriber data was transmitted.",
+      "severity": "low",
+      "next_action": "Recheck manually in a normal browser session before a real email-provider connection."
+    },
+    {
+      "screen_or_control": "Production newsletter form",
+      "viewport_or_device": "Vercel production alias",
+      "state_exercised": "Native form submission path",
+      "result": "pass",
+      "evidence": "The native submission path displayed the prototype confirmation You’re on the studio list without transmitting subscriber data.",
+      "severity": "none",
+      "next_action": "Connect an approved email provider before business launch."
+    },
+    {
+      "screen_or_control": "Production not-found fallback",
+      "viewport_or_device": "Vercel production alias",
+      "state_exercised": "Direct load of /not-a-route",
+      "result": "fail",
+      "evidence": "Vercel returned its own 404: NOT_FOUND page instead of the app fallback.",
+      "severity": "high",
+      "next_action": "Add a Vercel SPA fallback rewrite, redeploy, and reverify."
+    },
+    {
       "screen_or_control": "Home default layout",
       "viewport_or_device": "1280×720 desktop and 375×812 mobile",
       "state_exercised": "Full-page local review",
