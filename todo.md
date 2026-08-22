@@ -20,6 +20,6 @@
 - [x] Inspect repository manifests, source entry points, deployment configuration, and current documentation for README evidence.
 - [x] Create the required README evidence, architecture-decision, brief, and validation artifacts.
 - [x] Write a source-grounded public README with the supported local run path and deployment context.
-- [ ] Validate the README’s repository-relative links, claims, and documentation boundary.
-- [ ] Commit and push the README documentation update to the public GitHub repository.
+- [x] Validate the README’s repository-relative links, claims, and documentation boundary.
+- [x] Commit and push the README documentation update to the public GitHub repository.
 - [ ] Push the repair commit to the public GitHub repository and redeploy the existing Vercel project.
