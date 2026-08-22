@@ -1,6 +1,6 @@
 # GitHub and Vercel Release Plan
 
-**Status:** Approved for release; external publication has not yet been performed.
+**Status:** Completed through direct production deployment. The final production alias is `https://aurelia-link-hub.vercel.app` and the verified deployment ID is `dpl_M8Qr4ipCCcy4rLnptReXvPxtwYnW`.
 
 ## Verified local release evidence
 
@@ -11,11 +11,11 @@
 | Type check | Passed | `pnpm check` completed with exit code 0 on 2026-08-22. |
 | Production build | Passed | `pnpm build` completed with exit code 0 on 2026-08-22. |
 | Visual review | Passed | Desktop 1280×720 and mobile 375×812 full-page inspections completed. |
-| Asset condition | Requires deployment-path verification | The app currently resolves generated imagery through project-managed `/manus-storage/` paths. The Vercel preview must confirm all five campaign/product/mark assets return successfully before production publication. |
+| Asset condition | Passed | All `/manus-storage/` paths were removed; public stock campaign and product imagery rendered successfully on the final Vercel alias. |
 
 ## Proposed release path
 
-The proposed path is **Git-linked Vercel deployment**. After the user confirms the repository identity, privacy setting, source push, Vercel team, project name, and target, the source will be placed in the named GitHub repository on `main`. The matching Vercel project will then be created or linked to that repository and configured with the static build command `pnpm build` and output directory `dist/public`.
+The completed path is a **direct Vercel deployment** through the approved connector. Git linking was unavailable because the Vercel workspace did not have a GitHub Login Connection. The verified source is public on GitHub `main`, and Vercel deployed the static Vite build with `pnpm build`, `dist/public`, and an SPA fallback rewrite for direct unknown routes.
 
 | Stage | Change | Verification | Rollback |
 |---|---|---|---|
@@ -40,4 +40,4 @@ The following fields are intentionally unresolved. They are required before GitH
 
 ## Residual risks
 
-The application contains demonstration content, including product names, prices, email copy, social links, and `example.com` destinations. The newsletter handler intentionally does not transmit email addresses. The release should remain in preview until the brand owner replaces this content, selects a newsletter provider, connects analytics with approved consent handling, and confirms that project-managed image paths are reachable on the Vercel deployment.
+The application contains demonstration content, including product names, prices, email copy, social links, and `example.com` destinations. The newsletter handler intentionally does not transmit email addresses. Before a business launch, the brand owner should replace placeholder destinations, select a newsletter provider, and connect analytics with approved consent handling.

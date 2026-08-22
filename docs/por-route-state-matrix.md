@@ -3,7 +3,7 @@
 | Item | Kind | Purpose | Discovery source | Status before repair | Evidence | Approved exclusion or next action |
 |---|---|---|---|---|---|---|
 | `/` | Route | Public link-in-bio hub and primary social destination. | Router and `Home.tsx`. | Implemented, pending final verification. | Local desktop/mobile visual checks; Vercel production alias returns HTML 200. | Reverify after media repair and redeployment. |
-| `/404` and unmatched routes | Route/state | Recovery path for an unknown internal route. | App fallback router. | Implemented, unverified. | Fallback component exists in app router. | Direct-load and screenshot audit required. |
+| `/404` and unmatched routes | Route/state | Recovery path for an unknown internal route. | App fallback router and live Vercel verification. | Implemented and verified. | The production `/not-a-route` URL rendered the app’s fallback screen; its Go Home control returned to `/`. | No further action required. |
 | `#top-links` | Navigation | Skip the campaign section and reach priority paths. | Skip link in `Home.tsx`. | Implemented, unverified. | Source target exists. | Keyboard activation audit required. |
 | Campaign previous/next buttons | State | Switch manually between two featured campaign cards without timed motion. | `Home.tsx` campaign state. | Implemented, unverified. | Local source and initial visual review. | Exercise pointer and keyboard states after asset repair. |
 | Campaign call to action | CTA | Send social visitor to the active campaign destination and log a local event. | Campaign data in `Home.tsx`. | Implemented, content pending. | `example.com` destination currently present. | Approved prototype limitation; replace with approved campaign URL before business launch. |

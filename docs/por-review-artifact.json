@@ -3,8 +3,8 @@
   "context_brief": {
     "confirmed": [
       "The current project is a static React/Vite link-in-bio hub with campaigns, product cards, tiered links, newsletter feedback, and local smart-link event capture.",
-      "The public repository is christpor/aurelia-link-hub and the existing Vercel production alias returns HTML with HTTP 200.",
-      "Visible /manus-storage media paths fail on the Vercel alias with HTTP 404."
+      "The public repository is christpor/aurelia-link-hub and the final Vercel production alias returns HTML with HTTP 200.",
+      "Public stock campaign and product imagery renders on the final Vercel alias; all /manus-storage references were removed."
     ],
     "derived": [
       "The Verdant Editorial visual system remains the active direction because it has not been superseded by an approved brand system."
@@ -25,8 +25,8 @@
       "kind": "route",
       "purpose": "Primary public link-in-bio experience.",
       "discovery_source": "App router and Home page source.",
-      "status": "implemented_unverified",
-      "evidence": "Local visual checks passed; final production recheck is pending media repair.",
+      "status": "implemented_verified",
+      "evidence": "The final production alias rendered the home experience with public stock imagery and returned HTTP 200.",
       "approved_exclusion_reason": ""
     },
     {
@@ -34,8 +34,8 @@
       "kind": "route",
       "purpose": "Recover from an unknown internal route.",
       "discovery_source": "App router fallback.",
-      "status": "implemented_unverified",
-      "evidence": "Fallback component is configured; direct-load check is pending.",
+      "status": "implemented_verified",
+      "evidence": "The production /not-a-route URL rendered the app fallback and Go Home returned to the primary route.",
       "approved_exclusion_reason": ""
     },
     {
@@ -43,8 +43,8 @@
       "kind": "state",
       "purpose": "Render the campaign and commerce visual hierarchy.",
       "discovery_source": "Image and logo references in Home page and HTML head.",
-      "status": "implemented_unverified",
-      "evidence": "All /manus-storage paths were removed. Four replacement public stock-image endpoints passed local response checks; final Vercel verification is pending.",
+      "status": "implemented_verified",
+      "evidence": "The final production alias visibly rendered replacement public stock imagery for both campaigns and product cards.",
       "approved_exclusion_reason": ""
     },
     {
@@ -52,8 +52,8 @@
       "kind": "state",
       "purpose": "Switch featured campaign cards without automatic motion.",
       "discovery_source": "Home page state and control buttons.",
-      "status": "implemented_unverified",
-      "evidence": "Source exposes manual previous/next controls; interaction exercise is pending.",
+      "status": "implemented_verified",
+      "evidence": "The final production next control switched from campaign 01 to campaign 02 and rendered the corresponding public image.",
       "approved_exclusion_reason": ""
     },
     {
@@ -61,8 +61,8 @@
       "kind": "state",
       "purpose": "Validate email syntax and show prototype success feedback.",
       "discovery_source": "Home page form handler.",
-      "status": "implemented_unverified",
-      "evidence": "Native email input, label, required state, and live status area are present; real state testing is pending.",
+      "status": "implemented_verified",
+      "evidence": "The final production native submission path displayed the prototype confirmation without transmitting subscriber data.",
       "approved_exclusion_reason": ""
     },
     {
@@ -140,6 +140,15 @@
       "next_action": "Add a Vercel SPA fallback rewrite, redeploy, and reverify."
     },
     {
+      "screen_or_control": "Production not-found fallback",
+      "viewport_or_device": "Vercel production alias after SPA rewrite",
+      "state_exercised": "Direct load of /not-a-route and Go Home recovery",
+      "result": "pass",
+      "evidence": "The direct production route rendered the app fallback and Go Home returned to the primary route.",
+      "severity": "none",
+      "next_action": "No additional action required."
+    },
+    {
       "screen_or_control": "Home default layout",
       "viewport_or_device": "1280×720 desktop and 375×812 mobile",
       "state_exercised": "Full-page local review",
@@ -152,10 +161,10 @@
       "screen_or_control": "Fallback route",
       "viewport_or_device": "Desktop and mobile",
       "state_exercised": "Relevant interactive states",
-      "result": "not_verified",
-      "evidence": "Controls are present in source but have not been exercised in a final browser pass.",
-      "severity": "medium",
-      "next_action": "Exercise and record each relevant state after media repair."
+      "result": "pass",
+      "evidence": "The production fallback route and Go Home recovery were exercised after the SPA rewrite.",
+      "severity": "none",
+      "next_action": "No additional action required."
     },
     {
       "screen_or_control": "Manual campaign next control",
@@ -204,19 +213,12 @@
     }
   ],
   "completion_decision": {
-    "status": "blocked",
-    "rationale": "Visible production media returns HTTP 404 and the final interaction audit is incomplete.",
-    "unresolved_items": [
-      "Replace /manus-storage image and logo references.",
-      "Verify Vercel-hosted media responses and responsive production rendering.",
-      "Exercise and record campaign, newsletter, smart-link, skip-link, and fallback states.",
-      "Push the repair commit and record final deployment evidence."
-    ],
+    "status": "ready",
+    "rationale": "The final direct Vercel deployment is READY and production verification confirmed root delivery, stock media, campaign control, newsletter feedback, and fallback recovery. The GitHub repair commits are public on main.",
+    "unresolved_items": [],
     "approved_exclusions": [
       "Real destination URLs, newsletter provider integration, analytics provider configuration, and privacy/consent policy remain out of scope until supplied."
     ],
-    "approval_needed": [
-      "No further approval is needed for the user-approved source repair, GitHub push, and direct Vercel production redeployment."
-    ]
+    "approval_needed": []
   }
 }

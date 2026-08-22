@@ -12,4 +12,9 @@
 - [x] Replace all `/manus-storage` visual references with production-safe stock imagery or an equivalent CSS brand mark.
 - [x] Add source-controlled Vercel static-output configuration and revalidate the build.
 - [x] Verify responsive layout, campaign controls, newsletter states, smart-link event feedback, and fallback route locally; final Vercel checks remain pending.
+- [x] Verify the live Vercel document and campaign-stock imagery, including the manual campaign transition.
+- [x] Verify the production SPA fallback and its Go Home recovery after adding the Vercel rewrite.
+- [x] Deploy the payload to Vercel production through `porkh377-2742's projects`.
+- [x] Deploy the approved source to Vercel production and verify the final alias and visual assets.
+- [x] Finalize the release artifact and handoff record.
 - [ ] Push the repair commit to the public GitHub repository and redeploy the existing Vercel project.

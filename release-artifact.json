@@ -1,21 +1,21 @@
 {
   "request_id": "aurelia-link-hub-2026-08-22",
-  "status": "needs_review",
-  "summary": "The user explicitly approved publication to the public GitHub repository christpor/aurelia-link-hub, a source push to main, and a direct Vercel production deployment under porkh377-2742's projects. Local type-check, production build, and desktop/mobile visual inspection passed before release.",
+  "status": "ready",
+  "summary": "The corrected source is public on GitHub, the Vercel production alias is READY, and the final verification confirmed a successful HTML response, public stock-image rendering, manual campaign transition, prototype newsletter confirmation, and SPA fallback recovery.",
   "github": {
-    "repository_url": "",
+    "repository_url": "https://github.com/christpor/aurelia-link-hub",
     "visibility": "public",
     "branch": "main",
-    "commit": "",
-    "source_pushed": false
+    "commit": "9d61b5e",
+    "source_pushed": true
   },
   "vercel": {
     "project_name": "aurelia-link-hub",
-    "deployment_id": "",
+    "deployment_id": "dpl_M8Qr4ipCCcy4rLnptReXvPxtwYnW",
     "target": "production",
-    "alias_url": "",
-    "ready": false,
-    "http_status": 0,
+    "alias_url": "https://aurelia-link-hub.vercel.app",
+    "ready": true,
+    "http_status": 200,
     "git_linked": false
   },
   "approvals": {
@@ -24,7 +24,6 @@
     "vercel_deploy": true
   },
   "exceptions": [
-    "The Vercel deployment must verify project-managed /manus-storage asset resolution before it can be considered ready.",
     "All destination URLs and newsletter processing are placeholder prototype content."
   ]
 }
