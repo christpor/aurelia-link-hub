@@ -40,7 +40,7 @@ const campaigns = [
     copy: "New table pieces, cut from calm material and designed to keep company with the everyday.",
     cta: "Enter the August edit",
     href: "https://example.com/august-edit",
-    image: "/manus-storage/aurelia-campaign-atelier_1f6a8945.jpg",
+    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1600&q=85",
     tone: "light",
   },
   {
@@ -49,7 +49,7 @@ const campaigns = [
     copy: "A study in shade, placement, and the quiet charge of useful objects.",
     cta: "Visit the studio journal",
     href: "https://example.com/studio-journal",
-    image: "/manus-storage/aurelia-campaign-dawn_ee455a70.jpg",
+    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1600&q=85",
     tone: "dark",
   },
 ];
@@ -61,7 +61,7 @@ const products = [
     type: "Hand-blown glass",
     price: "$68",
     href: "https://example.com/amber-pourer",
-    image: "/manus-storage/aurelia-product-amber_ef19c895.jpg",
+    image: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1000&q=85",
   },
   {
     number: "02",
@@ -69,7 +69,7 @@ const products = [
     type: "Set of four",
     price: "$42",
     href: "https://example.com/hearth-linen",
-    image: "/manus-storage/aurelia-product-linen_61112b1e.jpg",
+    image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Home() {
 
       <aside className="identity-rail" aria-label="Aurelia brand identity">
         <div className="identity-rail__top">
-          <img className="brand-mark" src="/manus-storage/aurelia-mark_76450ef9.png" alt="Aurelia open-ring symbol" />
+          <span className="brand-mark" role="img" aria-label="Aurelia open-ring symbol" />
           <p className="brand-name">Aurelia<span>Studio</span></p>
         </div>
         <div className="identity-rail__bottom">
@@ -139,7 +139,7 @@ export default function Home() {
           <div className="intro__line"><span>Independent objects</span><span>New York / Everywhere</span></div>
           <div className="intro__main">
             <div className="identity-mobile">
-              <img className="brand-mark" src="/manus-storage/aurelia-mark_76450ef9.png" alt="Aurelia open-ring symbol" />
+              <span className="brand-mark" role="img" aria-label="Aurelia open-ring symbol" />
               <span>Aurelia Studio</span>
             </div>
             <p className="intro__kicker">This is the current room.</p>

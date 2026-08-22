@@ -1,7 +1,7 @@
 {
   "request_id": "aurelia-link-hub-2026-08-22",
   "status": "needs_review",
-  "summary": "The user explicitly approved publication to the public GitHub repository christpor/aurelia-link-hub, a source push to main, and a Git-linked Vercel production deployment under porkh377-2742's projects. Local type-check, production build, and desktop/mobile visual inspection passed before release.",
+  "summary": "The user explicitly approved publication to the public GitHub repository christpor/aurelia-link-hub, a source push to main, and a direct Vercel production deployment under porkh377-2742's projects. Local type-check, production build, and desktop/mobile visual inspection passed before release.",
   "github": {
     "repository_url": "",
     "visibility": "public",

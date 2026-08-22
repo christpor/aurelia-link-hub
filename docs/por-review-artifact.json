@@ -1,0 +1,177 @@
+{
+  "request_id": "aurelia-link-hub-por-release-2026-08-22",
+  "context_brief": {
+    "confirmed": [
+      "The current project is a static React/Vite link-in-bio hub with campaigns, product cards, tiered links, newsletter feedback, and local smart-link event capture.",
+      "The public repository is christpor/aurelia-link-hub and the existing Vercel production alias returns HTML with HTTP 200.",
+      "Visible /manus-storage media paths fail on the Vercel alias with HTTP 404."
+    ],
+    "derived": [
+      "The Verdant Editorial visual system remains the active direction because it has not been superseded by an approved brand system."
+    ],
+    "assumptions": [
+      "Public HTTPS stock imagery or a CSS brand mark can replace inaccessible project-managed media while preserving the intended campaign and product roles."
+    ],
+    "unknowns": [
+      "Approved brand destinations, product catalog, analytics provider, newsletter provider, consent language, and privacy policy are not supplied."
+    ],
+    "excluded_sensitive_classes": [
+      "Credentials", "private contact information", "customer data", "production analytics data", "private account configuration"
+    ]
+  },
+  "route_state_matrix": [
+    {
+      "item": "/",
+      "kind": "route",
+      "purpose": "Primary public link-in-bio experience.",
+      "discovery_source": "App router and Home page source.",
+      "status": "implemented_unverified",
+      "evidence": "Local visual checks passed; final production recheck is pending media repair.",
+      "approved_exclusion_reason": ""
+    },
+    {
+      "item": "/404 and unmatched route fallback",
+      "kind": "route",
+      "purpose": "Recover from an unknown internal route.",
+      "discovery_source": "App router fallback.",
+      "status": "implemented_unverified",
+      "evidence": "Fallback component is configured; direct-load check is pending.",
+      "approved_exclusion_reason": ""
+    },
+    {
+      "item": "Campaign, product, and brand media",
+      "kind": "state",
+      "purpose": "Render the campaign and commerce visual hierarchy.",
+      "discovery_source": "Image and logo references in Home page and HTML head.",
+      "status": "implemented_unverified",
+      "evidence": "All /manus-storage paths were removed. Four replacement public stock-image endpoints passed local response checks; final Vercel verification is pending.",
+      "approved_exclusion_reason": ""
+    },
+    {
+      "item": "Manual campaign controls",
+      "kind": "state",
+      "purpose": "Switch featured campaign cards without automatic motion.",
+      "discovery_source": "Home page state and control buttons.",
+      "status": "implemented_unverified",
+      "evidence": "Source exposes manual previous/next controls; interaction exercise is pending.",
+      "approved_exclusion_reason": ""
+    },
+    {
+      "item": "Newsletter form",
+      "kind": "state",
+      "purpose": "Validate email syntax and show prototype success feedback.",
+      "discovery_source": "Home page form handler.",
+      "status": "implemented_unverified",
+      "evidence": "Native email input, label, required state, and live status area are present; real state testing is pending.",
+      "approved_exclusion_reason": ""
+    },
+    {
+      "item": "Placeholder external destinations",
+      "kind": "cta",
+      "purpose": "Demonstrate campaign, product, and tiered navigation placement.",
+      "discovery_source": "Home page content arrays.",
+      "status": "approved_exclusion",
+      "evidence": "README and decision brief disclose example URLs as prototype content.",
+      "approved_exclusion_reason": "Approved prototype scope until the brand owner supplies final destinations."
+    }
+  ],
+  "interaction_visual_audit": [
+    {
+      "screen_or_control": "Production campaign/product media",
+      "viewport_or_device": "Vercel production alias",
+      "state_exercised": "Direct media request",
+      "result": "fail",
+      "evidence": "The campaign media path under /manus-storage returned HTTP 404.",
+      "severity": "high",
+      "next_action": "Replace every project-managed media path with a public Vercel-safe source and reverify."
+    },
+    {
+      "screen_or_control": "Replacement campaign/product media",
+      "viewport_or_device": "Local runtime and source endpoint checks",
+      "state_exercised": "Four public stock-image endpoints and CSS brand mark",
+      "result": "pass",
+      "evidence": "All four Unsplash endpoints returned successful responses and desktop/mobile previews rendered the media.",
+      "severity": "none",
+      "next_action": "Verify each asset through the final Vercel alias."
+    },
+    {
+      "screen_or_control": "Home default layout",
+      "viewport_or_device": "1280×720 desktop and 375×812 mobile",
+      "state_exercised": "Full-page local review",
+      "result": "pass",
+      "evidence": "Initial desktop and mobile screenshots show the intended Verdant Editorial hierarchy.",
+      "severity": "none",
+      "next_action": "Repeat screenshots against the repaired production alias."
+    },
+    {
+      "screen_or_control": "Fallback route",
+      "viewport_or_device": "Desktop and mobile",
+      "state_exercised": "Relevant interactive states",
+      "result": "not_verified",
+      "evidence": "Controls are present in source but have not been exercised in a final browser pass.",
+      "severity": "medium",
+      "next_action": "Exercise and record each relevant state after media repair."
+    },
+    {
+      "screen_or_control": "Manual campaign next control",
+      "viewport_or_device": "Desktop local preview",
+      "state_exercised": "Campaign 01 to campaign 02 transition",
+      "result": "pass",
+      "evidence": "Browser interaction changed the indicator to 02 / 02, updated campaign copy, and loaded the second public image.",
+      "severity": "none",
+      "next_action": "Reverify on the final Vercel alias."
+    },
+    {
+      "screen_or_control": "Newsletter form",
+      "viewport_or_device": "Desktop local preview",
+      "state_exercised": "Invalid native-email input and valid confirmation",
+      "result": "pass",
+      "evidence": "Invalid input did not create success feedback; valid input reader@example.com showed the inline confirmation You’re on the studio list.",
+      "severity": "none",
+      "next_action": "Reverify on the final Vercel alias; an email provider remains outside current scope."
+    },
+    {
+      "screen_or_control": "Smart-link analytics preview",
+      "viewport_or_device": "Desktop local preview",
+      "state_exercised": "Priority smart-link activation",
+      "result": "pass",
+      "evidence": "An intercepted Shop new arrivals click added a timestamped Priority paths event to the analytics-preview panel.",
+      "severity": "none",
+      "next_action": "Reverify a representative event on the final Vercel alias."
+    },
+    {
+      "screen_or_control": "Skip link",
+      "viewport_or_device": "Desktop local preview",
+      "state_exercised": "Keyboard focus and Enter activation",
+      "result": "pass",
+      "evidence": "The skip link received focus and activation updated the URL to #top-links while moving to the priority-paths target.",
+      "severity": "none",
+      "next_action": "Reverify on the final Vercel alias."
+    },
+    {
+      "screen_or_control": "Not-found fallback",
+      "viewport_or_device": "Desktop local preview",
+      "state_exercised": "Direct-load unmatched route and Go Home recovery",
+      "result": "pass",
+      "evidence": "The unmatched route /not-a-route showed the 404 view; Go Home returned to the primary route.",
+      "severity": "none",
+      "next_action": "Reverify the fallback on the final Vercel alias."
+    }
+  ],
+  "completion_decision": {
+    "status": "blocked",
+    "rationale": "Visible production media returns HTTP 404 and the final interaction audit is incomplete.",
+    "unresolved_items": [
+      "Replace /manus-storage image and logo references.",
+      "Verify Vercel-hosted media responses and responsive production rendering.",
+      "Exercise and record campaign, newsletter, smart-link, skip-link, and fallback states.",
+      "Push the repair commit and record final deployment evidence."
+    ],
+    "approved_exclusions": [
+      "Real destination URLs, newsletter provider integration, analytics provider configuration, and privacy/consent policy remain out of scope until supplied."
+    ],
+    "approval_needed": [
+      "No further approval is needed for the user-approved source repair, GitHub push, and direct Vercel production redeployment."
+    ]
+  }
+}

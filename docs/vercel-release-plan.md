@@ -36,7 +36,7 @@ The following fields are intentionally unresolved. They are required before GitH
 | Vercel team | Approved | `porkh377-2742's projects` (`team_WYxqfRT5HsdijR11tIMxUyZM`). |
 | Vercel project name | Approved | `aurelia-link-hub`. |
 | Deployment target | Approved | Production. |
-| Deployment mode | Approved | Git-linked Vercel deployment. |
+| Deployment mode | Approved | Direct Vercel deployment through the configured connector; Git linking remains blocked by Vercel's GitHub Login Connection requirement. |
 
 ## Residual risks
 
