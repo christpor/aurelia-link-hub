@@ -1,0 +1,32 @@
+{
+  "project_archetype": "application-source-distribution",
+  "primary_reader_job": "Evaluate the live brand link hub, then run or adapt the static source without mistaking prototype content for connected commerce or marketing systems.",
+  "opening_mechanism": "source-distribution-clarification",
+  "proof_vehicle": "verified-command",
+  "first_success_format": "A concise pnpm install, local development, type-check, and build path paired with the documented live site.",
+  "information_depth_boundary": "Release evidence, POR audit details, and deployment history remain in docs and release artifacts rather than being duplicated in the README.",
+  "visual_route": "none",
+  "section_order": [
+    "Bounded project description and live site",
+    "Included interface behaviors",
+    "Local development and verification commands",
+    "Project map",
+    "Deployment configuration",
+    "Prototype boundaries and content replacement",
+    "Documentation and license note"
+  ],
+  "evidence_ids": [
+    "PROJECT_ARCHETYPE",
+    "LIVE_SITE",
+    "LOCAL_DEV_COMMAND",
+    "LOCAL_CHECK_COMMAND",
+    "LOCAL_BUILD_COMMAND",
+    "SMART_LINKS",
+    "FEATURED_CAMPAIGNS",
+    "SHOPPING_AND_MEDIA",
+    "NEWSLETTER_PROTOTYPE",
+    "VERCEL_CONFIG",
+    "PROTOTYPE_BOUNDARY",
+    "LICENSE_METADATA"
+  ]
+}

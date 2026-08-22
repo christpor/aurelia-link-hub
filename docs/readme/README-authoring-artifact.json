@@ -1,0 +1,168 @@
+{
+  "request": {
+    "request_id": "aurelia-readme-2026-08-22",
+    "project_root": "/home/ubuntu/brand-link-hub",
+    "mode": "write",
+    "requested_outcome": "Replace the root README with a public, source-grounded project entry point and add traceability artifacts.",
+    "audience": "Brand developers and collaborators evaluating or adapting the link hub source.",
+    "asset_policy": "none",
+    "authoritative_sources": [
+      "package.json",
+      "client/src/pages/Home.tsx",
+      "vercel.json",
+      "release-artifact.json",
+      "docs/por-review-artifact.json"
+    ],
+    "readme_target": "README.md",
+    "write_approval": true
+  },
+  "evidence_ledger": [
+    {
+      "claim_id": "PROJECT_ARCHETYPE",
+      "kind": "claim",
+      "text": "Aurelia Link Hub is a static React/Vite source project for a brand link-in-bio experience.",
+      "source_refs": ["package.json#L2-L12", "client/src/pages/Home.tsx#L96-L258"],
+      "provenance_state": "source-correspondent",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "The repository is a prototype and does not include business-system integrations."
+    },
+    {
+      "claim_id": "LIVE_SITE",
+      "kind": "link",
+      "text": "The recorded Vercel production alias is https://aurelia-link-hub.vercel.app with a verified HTTP 200 response.",
+      "source_refs": ["release-artifact.json#L12-L19"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "The release record reflects the documented deployment and is not a substitute for ongoing uptime monitoring."
+    },
+    {
+      "claim_id": "LOCAL_DEV_COMMAND",
+      "kind": "command",
+      "text": "pnpm dev starts the Vite development server defined by the project manifest.",
+      "source_refs": ["package.json#L6-L12"],
+      "provenance_state": "source-correspondent",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "The manifest does not declare a Node.js version."
+    },
+    {
+      "claim_id": "LOCAL_CHECK_COMMAND",
+      "kind": "command",
+      "text": "pnpm check maps to TypeScript no-emit validation.",
+      "source_refs": ["package.json#L6-L12", "release-artifact.json#L3-L4"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "The command validates TypeScript but does not replace user-flow testing."
+    },
+    {
+      "claim_id": "LOCAL_BUILD_COMMAND",
+      "kind": "command",
+      "text": "pnpm build creates the configured static build output and server bundle.",
+      "source_refs": ["package.json#L6-L12", "vercel.json#L3-L6"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "The repository does not define an automated CI workflow."
+    },
+    {
+      "claim_id": "SMART_LINKS",
+      "kind": "claim",
+      "text": "Smart-link clicks dispatch an aurelia:smart-link browser CustomEvent and update a local event-preview drawer.",
+      "source_refs": ["client/src/pages/Home.tsx#L19-L34", "client/src/pages/Home.tsx#L103-L107", "client/src/pages/Home.tsx#L251-L254"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "No analytics provider is configured by this source."
+    },
+    {
+      "claim_id": "FEATURED_CAMPAIGNS",
+      "kind": "claim",
+      "text": "The featured campaign area uses two manual previous/next controls and a polite live position indicator.",
+      "source_refs": ["client/src/pages/Home.tsx#L36-L55", "client/src/pages/Home.tsx#L151-L175", "docs/por-review-artifact.json#L98-L104"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "Campaign copy and destinations are demonstration content."
+    },
+    {
+      "claim_id": "SHOPPING_AND_MEDIA",
+      "kind": "claim",
+      "text": "The source contains two product cards and public stock-media URLs that were verified on the final production alias.",
+      "source_refs": ["client/src/pages/Home.tsx#L57-L74", "client/src/pages/Home.tsx#L189-L210", "docs/por-review-artifact.json#L107-L113"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "Product names, prices, and destinations are demonstration content."
+    },
+    {
+      "claim_id": "NEWSLETTER_PROTOTYPE",
+      "kind": "claim",
+      "text": "The newsletter form validates a non-empty email field locally and presents inline success feedback without an external submission.",
+      "source_refs": ["client/src/pages/Home.tsx#L113-L119", "client/src/pages/Home.tsx#L225-L239", "docs/por-review-artifact.json#L125-L131"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "A newsletter provider, consent language, and delivery workflow are outside this repository."
+    },
+    {
+      "claim_id": "VERCEL_CONFIG",
+      "kind": "distribution",
+      "text": "The Vercel configuration defines Vite, a frozen pnpm install, the pnpm build command, dist/public output, and a catch-all SPA rewrite.",
+      "source_refs": ["vercel.json#L1-L13"],
+      "provenance_state": "source-correspondent",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "This configuration does not itself establish an ongoing Git-linked deployment relationship."
+    },
+    {
+      "claim_id": "PROTOTYPE_BOUNDARY",
+      "kind": "claim",
+      "text": "Outbound destinations and newsletter processing remain placeholder prototype content.",
+      "source_refs": ["release-artifact.json#L26-L28", "client/src/pages/Home.tsx#L36-L74", "client/src/pages/Home.tsx#L184-L246"],
+      "provenance_state": "executed-observed",
+      "materiality": "material",
+      "status": "supported",
+      "limitation": "Business owners must provide approved production content and integrations."
+    },
+    {
+      "claim_id": "LICENSE_METADATA",
+      "kind": "license",
+      "text": "The package manifest declares an MIT license.",
+      "source_refs": ["package.json#L2-L5"],
+      "provenance_state": "exists",
+      "materiality": "material",
+      "status": "pending-user-review",
+      "limitation": "No top-level LICENSE file was found during README reconnaissance."
+    }
+  ],
+  "architecture_decision": {
+    "project_archetype": "application-source-distribution",
+    "primary_reader_job": "Evaluate the live brand link hub, then run or adapt the static source without mistaking prototype content for connected commerce or marketing systems.",
+    "opening_mechanism": "source-distribution-clarification",
+    "proof_vehicle": "verified-command",
+    "first_success_format": "A concise pnpm install, local development, type-check, and build path paired with the documented live site.",
+    "information_depth_boundary": "Release evidence, POR audit details, and deployment history remain in docs and release artifacts rather than being duplicated in the README.",
+    "visual_route": "none",
+    "section_order": ["Bounded project description and live site", "Included interface behaviors", "Local development and verification commands", "Project map", "Deployment configuration", "Prototype boundaries and content replacement", "Documentation and license note"],
+    "evidence_ids": ["PROJECT_ARCHETYPE", "LIVE_SITE", "LOCAL_DEV_COMMAND", "LOCAL_CHECK_COMMAND", "LOCAL_BUILD_COMMAND", "SMART_LINKS", "FEATURED_CAMPAIGNS", "SHOPPING_AND_MEDIA", "NEWSLETTER_PROTOTYPE", "VERCEL_CONFIG", "PROTOTYPE_BOUNDARY", "LICENSE_METADATA"]
+  },
+  "readme_brief": {
+    "audience": "Brand developers and collaborators evaluating or adapting the link hub source.",
+    "reader_job": "Understand the prototype boundary, open the live experience, and follow the supported local command path.",
+    "selected_sections": ["Description and live site", "Included behavior", "Local development", "Project map", "Deployment", "Prototype boundary", "Documentation", "License note"],
+    "delegated_sections": ["Detailed release evidence", "POR audit history", "Provider integration", "Brand content operations"],
+    "tone_constraints": ["Use bounded source-grounded language", "Do not represent placeholders as live commerce or marketing integrations", "Avoid badges and generic superlatives"],
+    "material_claim_ids": ["PROJECT_ARCHETYPE", "LIVE_SITE", "SMART_LINKS", "FEATURED_CAMPAIGNS", "SHOPPING_AND_MEDIA", "NEWSLETTER_PROTOTYPE", "VERCEL_CONFIG", "PROTOTYPE_BOUNDARY"],
+    "open_questions": ["Add an authoritative LICENSE file before relying on the manifest declaration for distribution decisions."]
+  },
+  "validation_report": {
+    "status": "pass",
+    "passed_checks": ["Repository evidence was inspected", "No visual asset was selected", "Draft commands correspond to the manifest", "The project-scoped validator confirmed evidence structure and README repository-relative links"],
+    "failed_checks": [],
+    "pending_review": ["Add a top-level LICENSE file before relying on package metadata as the authoritative distribution license."],
+    "planned_mutations": ["Completed: replaced README.md", "Completed: added documentation artifacts under docs/readme/"]
+  }
+}

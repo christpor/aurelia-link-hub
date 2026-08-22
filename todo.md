@@ -17,4 +17,9 @@
 - [x] Deploy the payload to Vercel production through `porkh377-2742's projects`.
 - [x] Deploy the approved source to Vercel production and verify the final alias and visual assets.
 - [x] Finalize the release artifact and handoff record.
+- [x] Inspect repository manifests, source entry points, deployment configuration, and current documentation for README evidence.
+- [x] Create the required README evidence, architecture-decision, brief, and validation artifacts.
+- [x] Write a source-grounded public README with the supported local run path and deployment context.
+- [ ] Validate the README’s repository-relative links, claims, and documentation boundary.
+- [ ] Commit and push the README documentation update to the public GitHub repository.
 - [ ] Push the repair commit to the public GitHub repository and redeploy the existing Vercel project.
